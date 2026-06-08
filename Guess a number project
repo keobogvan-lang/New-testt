@@ -1,0 +1,23 @@
+import random 
+n=random.randint(0,100)
+tentative=0
+possibilité=10
+print(" You have", possibilité, "possibilities")
+v=int(input("what is your number"))
+
+while v>n:
+    tentative+=1
+    print("Too High")
+    print( "you have", possibilité-tentative, "possiblities left")
+    v=int(input("what is your number"))
+while v<n:
+    tentative+=1
+    print("Too Low")
+    print( "you have", possibilité-tentative, "possiblities left")
+
+    v=int(input("what is your number"))
+
+if tentative> possibilité:
+    print(" You don't have any other possibilities left")
+tentative+=1
+print("yay that is the correct answer", "you have done the game in ", tentative, "tries")
